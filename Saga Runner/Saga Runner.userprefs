@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\JW_Spawner.cs">
+    <Files>
+      <File FileName="Assets\Managers\GUIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\JW_TopGravity.cs" Line="1" Column="1" />
+      <File FileName="Assets\Runner\Runner.cs" Line="147" Column="2" />
+      <File FileName="Assets\Platform\PlatformManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Booster\Booster.cs" Line="1" Column="1" />
+      <File FileName="Assets\JW_LocationManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\JW_Spawner.cs" Line="31" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
