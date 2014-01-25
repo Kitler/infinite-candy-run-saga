@@ -24,6 +24,9 @@ public class GUIManager : MonoBehaviour {
 		instructionsText.enabled = false;
 		runnerText.enabled = false;
 		enabled = false;
+		GetComponent<AudioSource>().Stop();
+		GetComponent<AudioSource>().Play();
+		Debug.Log("PLAY");
 	}
 	
 	private void GameOver () {

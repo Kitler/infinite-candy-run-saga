@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Runner : MonoBehaviour {
 
@@ -15,6 +15,9 @@ public class Runner : MonoBehaviour {
 
 	public string playertype;
 
+	public List<AudioClip> sounds;
+	AudioSource aud;
+
 	void Start () {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -22,6 +25,8 @@ public class Runner : MonoBehaviour {
 		renderer.enabled = false;
 		rigidbody.isKinematic = true;
 		enabled = false;
+		aud = GetComponent<AudioSource>();
+
 		//touchingPlatform = true;
 	}
 	
@@ -111,9 +116,13 @@ public class Runner : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision collision) {
-		//if (collision.gameObject.tag == "Ground") {
+		if (collision.gameObject.layer == LayerMask.NameToLayer("Floor")) {
 			touchingPlatform = true;
-		//}
+		}
+		if (collision.gameObject.layer == LayerMask.NameToLayer("Vehicles")) {
+			aud.clip = sounds[5];
+			aud.Play();
+		}
 	}
 
 	void OnCollisionExit (Collision collision) {
